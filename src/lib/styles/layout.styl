@@ -8,11 +8,11 @@ breakpoint(breakpoint = $breakpoint, condition = $default-condition)
   @media screen and ({condition} breakpoint)
     block
 
-above(point = $breakpoint)
+above(breakpoint = $breakpoint)
   @media screen and (min-width breakpoint)
     block
 
-below(breakpoint)
+below(breakpoint = $breakpoint)
   @media screen and (max-width breakpoint)
     block
 
@@ -21,9 +21,6 @@ below(breakpoint)
   padding-right $grid-gutter
   padding-left $grid-gutter
   margin 0 auto
-
-  +below(350px)
-    margin-top 20px
 
 .group
   margin-right -($grid-gutter)
@@ -42,4 +39,6 @@ below(breakpoint)
   padding-left $grid-gutter
 
 .grid-6
-  width 50%
+
+  +above()
+    width 50%
