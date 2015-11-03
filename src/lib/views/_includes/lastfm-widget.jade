@@ -1,0 +1,22 @@
+
+div Beau is currently listening to #[a#lastfm(href="http://www.last.fm/user/rocktronica") the birds singing] ♫
+
+script.
+  function fetchJSONFile(path, callback) {
+    var httpRequest = new XMLHttpRequest();
+    httpRequest.onreadystatechange = function() {
+      if (httpRequest.readyState === 4) {
+        if (httpRequest.status === 200) {
+          var data = JSON.parse(httpRequest.responseText);
+          if (callback) callback(data);
+        }
+      }
+    };
+    httpRequest.open('GET', path);
+    httpRequest.send(); 
+  }
+  
+  fetchJSONFile('https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=rocktronica&api_key=ef21ca5e745c2aa03d9f3120444d98e9&format=json', function(data) {
+    var track = data.recenttracks.track[0];
+    document.getElementById('lastfm').innerHTML = track.artist["#text"] + " - " + track.name;
+  });

@@ -1,4 +1,20 @@
-$color = red
+$color-white = #ffffff
+$color-light-grey = #999999
+$color-brand-primary = #ae79e4
+
+$base-font-size = 20px
 
 body
-  background-color $color
+  background-color $color-white
+  font-size $base-font-size
+  line-height 1.4
+
+a
+  &, &:link, &:visited
+    color $color-brand-primary
+
+.site-footer
+  font-size 1rem
+  line-height 1.8
+  text-align center
+  color $color-light-grey
