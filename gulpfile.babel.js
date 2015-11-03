@@ -8,6 +8,8 @@ import { LOCALS, PATHS } from './constants'
 
 gulp.task('default', ['jade', 'stylus', 'images', 'watch'])
 
+gulp.task('build', ['jade', 'stylus', 'images'])
+
 gulp.task('jade', () =>  {
   const paths = PATHS.VIEWS.IGNORE
   paths.unshift(PATHS.VIEWS.ENTRY)

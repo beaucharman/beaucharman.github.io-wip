@@ -5,9 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint -c .eslintrc --ext .js dist",
+    "eslint": "eslint --config .eslintrc --ext .js dist/",
+    "stylint": "stylint --config .stylintrc src/lib/styles/",
+    "jadelint": "jadelint src/lib/views/",
+    "lint": "npm run eslint && npm run stylint && npm run jadelint",
     "start": "babel-node server.js",
-    "build": "gulp default"
+    "build": "gulp build",
+    "dev": "gulp default"
   },
   "repository": {
     "type": "git",
@@ -33,7 +37,10 @@
     "gulp-imagemin": "^2.4.0",
     "gulp-jade": "^1.1.0",
     "gulp-stylus": "^2.1.0",
+    "jade-lint": "^1.2.13",
+    "jadelint": "^0.3.2",
     "lodash": "^3.10.1",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "stylint": "^1.2.5"
   }
 }
