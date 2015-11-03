@@ -5,18 +5,19 @@ const PATHS = {
   },
   STYLES: {
     ENTRY: './src/lib/styles/index.styl',
+    SRC: './src/lib/styles/**/*',
     DIST: './dist/assets/styles/',
   },
   VIEWS: {
     ENTRY: './src/lib/views/**/*.jade',
     DIST: './dist/',
     IGNORE: [
-      '!./src/lib/views/_includes/**',
+      '!./src/lib/views/_includes/**/*',
       '!./src/lib/views/_layout.jade',
     ],
   },
   IMAGES: {
-    ENTRY: './src/lib/images/*',
+    ENTRY: './src/lib/images/**/*',
     DIST: './dist/assets/images/',
   },
 }

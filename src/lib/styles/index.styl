@@ -1,13 +1,18 @@
-$color-white = #ffffff
-$color-light-grey = #999999
-$color-brand-primary = #ae79e4
+@import "variables"
+@import "nib"
+// normalize-css()
+@import "layout"
 
-$base-font-size = 20px
+*
+  box-sizing border-box
 
 body
   background-color $color-white
   font-size $base-font-size
   line-height 1.4
+
+button
+  appearance none
 
 a
   &, &:link, &:visited

@@ -6,7 +6,7 @@ import imagemin from 'gulp-imagemin'
 
 import { LOCALS, PATHS } from './constants'
 
-gulp.task('default', ['jade', 'stylus', 'images', 'watch'])
+gulp.task('default', ['watch'])
 
 gulp.task('build', ['jade', 'stylus', 'images'])
 
@@ -20,8 +20,15 @@ gulp.task('jade', () =>  {
 })
 
 gulp.task('stylus', () =>  {
+  const nib = require('nib')
+  const options = {
+    use: [
+      nib(),
+    ]
+  }
+
   gulp.src(PATHS.STYLES.ENTRY)
-    .pipe(stylus())
+    .pipe(stylus(options))
     .pipe(gulp.dest(PATHS.STYLES.DIST))
 })
 
@@ -35,6 +42,6 @@ gulp.task('images', () =>  {
 
 gulp.task('watch', function() {
   gulp.watch(PATHS.VIEWS.ENTRY, ['jade'])
-  gulp.watch(PATHS.STYLES.ENTRY, ['stylus'])
+  gulp.watch(PATHS.STYLES.SRC, ['stylus'])
   gulp.watch(PATHS.IMAGES.ENTRY, ['images'])
 })

@@ -1,0 +1,45 @@
+$max-width = 960px
+$grid-gutter = 18px
+$columns = 12
+$breakpoint = 720px
+$default-condition = 'max-width'
+
+breakpoint(breakpoint = $breakpoint, condition = $default-condition)
+  @media screen and ({condition} breakpoint)
+    block
+
+above(point = $breakpoint)
+  @media screen and (min-width breakpoint)
+    block
+
+below(breakpoint)
+  @media screen and (max-width breakpoint)
+    block
+
+.container
+  max-width $width
+  padding-right $grid-gutter
+  padding-left $grid-gutter
+  margin 0 auto
+
+  +below(350px)
+    margin-top 20px
+
+.group
+  margin-right -($grid-gutter)
+  margin-left -($grid-gutter)
+
+  &:after
+    content ''
+    display table
+    clear both
+
+.block
+  float left
+  width 100%
+  min-height 1px
+  padding-right $grid-gutter
+  padding-left $grid-gutter
+
+.grid-6
+  width 50%
