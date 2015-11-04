@@ -1,11 +1,14 @@
-.container
+$container
   max-width $max-width
   padding-right $grid-gutter
   padding-left $grid-gutter
   margin 0 auto
 
+.container
+  @extends $container
+
 .container--narrow
-  @extends .container
+  @extends $container
 
   max-width $display-medium
 
