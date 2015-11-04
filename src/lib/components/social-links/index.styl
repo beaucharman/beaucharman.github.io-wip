@@ -1,0 +1,25 @@
+  .social-links__list
+    padding-left 0
+
+  .social-links__item
+    list-style none
+
+  .social-links__icon
+    min-width 1.75rem
+
+  .social-links__anchor
+    font-weight 100
+    display block
+    padding 0.25em
+    padding-bottom 3px
+    border-bottom 1px solid transparent
+
+    &, &:link, &:visited
+      text-decoration none
+      border-bottom 2px solid transparent
+
+    &:focus, &:hover
+      border-bottom-color $color-brand-primary
+
+    +below()
+      border-top 1px solid $color-brand-primary

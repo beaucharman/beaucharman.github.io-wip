@@ -5,7 +5,7 @@ const PATHS = {
   },
   STYLES: {
     ENTRY: './src/lib/styles/index.styl',
-    SRC: './src/lib/styles/**/*',
+    SRC: './src/lib/**/*.styl',
     DIST: './dist/assets/styles/',
   },
   VIEWS: {

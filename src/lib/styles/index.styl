@@ -3,83 +3,43 @@
 normalize-css()
 @import "layout"
 
-@media screen
+// Components
+@import "../components/site-title/index"
+@import "../components/footer/index"
+@import "../components/social-links/index"
 
-  *
-    box-sizing border-box
+*
+  box-sizing border-box
 
-  body
-    background-color $color-white
-    font-size $base-font-size - 2
-    font-family $body-font-family
-    line-height $body-line-height
-    color $color-dark-grey
+body
+  background-color $color-white
+  font-size $base-font-size - 2
+  font-family $body-font-family
+  line-height $body-line-height
+  color $color-dark-grey
 
-    +above()
-      font-size $base-font-size
+  +above()
+    font-size $base-font-size
 
-  h1, h2, h3, h4
-    font-family $font-family-condensed
-    font-weight $headings-font-weight
-    line-height $headings-line-height
+h1, h2, h3, h4
+  font-family $font-family-condensed
+  font-weight $headings-font-weight
+  line-height $headings-line-height
 
-  .page
-    border-top 0.25rem solid $color-brand-primary
+.page
+  border-top 0.25rem solid $color-brand-primary
 
-  a
-    &, &:link, &:visited
-      color $color-brand-primary
+a
+  &, &:link, &:visited
+    color $color-brand-primary
 
-    &:focus, &:hover
-      color darken($color-brand-primary, 25%)
+  &:focus, &:hover
+    color darken($color-brand-primary, 25%)
 
-  .site-title__photo
-    border-radius 100%
-    margin-top 2.75em
-    max-height 200px
+  +above()
+    transition all 100ms cubic-bezier(0.77, 0, 0.175, 1)
 
-  .site-title__heading
-    text-transform uppercase
-    margin-bottom 0
-    font-size 3.75rem
-
-  .site-title__leading-paragraph
-    font-size 2rem
-    line-height 1.2
-    margin-top 0
-
-    a
-      &, &:link, &:visited
-        text-decoration none
-
-  .social-links__list
-    padding-left 0
-
-  .social-links__item
-    list-style none
-
-  .social-links__icon
-    min-width 1.75rem
-
-  .social-links__anchor
-    font-weight 100
-    display block
-    padding 0.25em
-
-    &, &:link, &:visited
-      text-decoration none
-
-    +below()
-      border-top 1px solid $color-brand-primary
-
-  img
-    vertical-align middle
-    max-width 100%
-    height auto
-
-  .site-footer
-    font-size 1rem
-    line-height 1.8
-    text-align center
-    color $color-light-grey
-    margin-top 4.5rem
+img
+  vertical-align middle
+  max-width 100%
+  height auto
