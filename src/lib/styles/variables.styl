@@ -1,5 +1,47 @@
 $color-white = #ffffff
 $color-light-grey = #999999
+$color-dark-grey = #333333
 $color-brand-primary = #ae79e4
 
 $base-font-size = 20px
+
+$font-family-serif = "Lucida Serif", Lucida, Georgia, serif
+$font-family-sans-serif = "Helvetica Neue", Helvetica, "Lucida Grande", sans-serif
+$font-family-condensed = "proxima-nova-alt-ext-cond", sans-serif
+$font-family-monospace = Consolas, monaco, monospace
+
+$body-font-family = $font-family-serif
+$body-font-weight = 400
+$body-line-height = 1.6
+
+$code-font-family = $font-family-monospace
+
+$heading-font-family = $font-family-condensed
+$headings-font-weight = 800
+$headings-line-height = 1.2
+
+$display-narrow = 520px
+$display-medium = 720px
+$display-desktop = 960px
+$display-wide = 1140px
+
+$max-width = $display-desktop
+$grid-gutter = 18px
+$grid-pattern = 12
+$breakpoint = $display-medium
+$default-condition = 'max-width'
+
+breakpoint(breakpoint = $breakpoint, condition = $default-condition)
+  @media screen and ({condition} breakpoint)
+    block
+
+above(breakpoint = $breakpoint)
+  @media screen and (min-width breakpoint)
+    block
+
+below(breakpoint = $breakpoint)
+  @media screen and (max-width breakpoint)
+    block
+
+percentage(decimal)
+  (decimal * 100) %

@@ -3,23 +3,83 @@
 normalize-css()
 @import "layout"
 
-*
-  box-sizing border-box
+@media screen
 
-body
-  background-color $color-white
-  font-size $base-font-size
-  line-height 1.4
+  *
+    box-sizing border-box
 
-button
-  appearance none
+  body
+    background-color $color-white
+    font-size $base-font-size - 2
+    font-family $body-font-family
+    line-height $body-line-height
+    color $color-dark-grey
 
-a
-  &, &:link, &:visited
-    color $color-brand-primary
+    +above()
+      font-size $base-font-size
 
-.site-footer
-  font-size 1rem
-  line-height 1.8
-  text-align center
-  color $color-light-grey
+  h1, h2, h3, h4
+    font-family $font-family-condensed
+    font-weight $headings-font-weight
+    line-height $headings-line-height
+
+  .page
+    border-top 0.25rem solid $color-brand-primary
+
+  a
+    &, &:link, &:visited
+      color $color-brand-primary
+
+    &:focus, &:hover
+      color darken($color-brand-primary, 25%)
+
+  .site-title__photo
+    border-radius 100%
+    margin-top 2.75em
+    max-height 200px
+
+  .site-title__heading
+    text-transform uppercase
+    margin-bottom 0
+    font-size 3.75rem
+
+  .site-title__leading-paragraph
+    font-size 2rem
+    line-height 1.2
+    margin-top 0
+
+    a
+      &, &:link, &:visited
+        text-decoration none
+
+  .social-links__list
+    padding-left 0
+
+  .social-links__item
+    list-style none
+
+  .social-links__icon
+    min-width 1.75rem
+
+  .social-links__anchor
+    font-weight 100
+    display block
+    padding 0.25em
+
+    &, &:link, &:visited
+      text-decoration none
+
+    +below()
+      border-top 1px solid $color-brand-primary
+
+  img
+    vertical-align middle
+    max-width 100%
+    height auto
+
+  .site-footer
+    font-size 1rem
+    line-height 1.8
+    text-align center
+    color $color-light-grey
+    margin-top 4.5rem

@@ -1,17 +1,72 @@
 extends ./_layout
 
 block content
-
-  h1 Beau Charman
   
-  .container
+  .page
     
-    .group
-      
-      .block.grid-6
-        p this is 
-        
-      .block.grid-6
-        p a column
+    header.site-title
   
-  img(src="#{PATHS.IMAGES}/profile-image-2015.jpg")
+      .container
+
+        .group
+      
+          .block.grid-3
+            img.site-title__photo(src="#{PATHS.IMAGES}/profile-image-2015.jpg")
+            
+          .block.grid-9
+            h1.site-title__heading Beau Charman
+            
+            p.site-title__leading-paragraph Senior front-end developer at #[a(href="http://inlight.com.au/", title="Check out Inlight!", target="_blank") Inlight Media], musician, vegan, CSS/JS writer, Japanese and physics enthusiast, cyclist, gamer, amateur photographer.
+      
+    section.social-links  
+
+      .container--narrow
+
+        .group
+          
+          ul.social-links__list
+  
+            li.social-links__item.block.grid-4
+              a.social-links__anchor(href="https://github.com/beaucharman", title="Beau's repos and contributions on GitHub", rel="exernal")
+                i.social-links__icon.fa.fa-github-alt
+                | GitHub
+
+            li.social-links__item.block.grid-4
+              a.social-links__anchor(href="http://www.pinterest.com/beaucharman/", title="Pretty and cool stuff on Pinterest", rel="exernal")
+                i.social-links__icon.fa.fa-pinterest
+                | Pinterest
+
+            li.social-links__item.block.grid-4
+              a.social-links__anchor(href="https://twitter.com/beaucharman", title="Beau's important things that he says under 140 characters on Twitter", rel="exernal")
+                i.social-links__icon.fa.fa-twitter
+                | Twitter
+
+            li.social-links__item.block.grid-4
+              a.social-links__anchor(href="http://photographstakenbybeau.tumblr.com/", title="Tumblr Randomlr", rel="exernal")
+                i.social-links__icon.fa.fa-tumblr
+                | Tumblr
+
+            li.social-links__item.block.grid-4
+              a.social-links__anchor(href="http://au.linkedin.com/in/beaucharman", title="Beau's LinkedIn portfolio", rel="exernal")
+                i.social-links__icon.fa.fa-linkedin
+                | LinkedIn
+
+            li.social-links__item.block.grid-4
+              a.social-links__anchor(href="https://www.facebook.com/beau.charman", title="meh", rel="exernal")
+                i.social-links__icon.fa.fa-facebook
+                | Facebook
+
+            li.social-links__item.block.grid-4
+              a.social-links__anchor(href="http://instagram.com/beaucharman", title="Cat and food pics on Instagram", rel="exernal")
+                i.social-links__icon.fa.fa-instagram
+                | Instgram
+
+            li.social-links__item.block.grid-4
+              a.social-links__anchor(href="http://www.last.fm/user/rocktronica", title="All the musics on Last.FM", rel="exernal")
+                i.social-links__icon.fa.fa-square
+                | last.FM
+
+            li.social-links__item.block.grid-4
+              a.social-links__anchor(href="https://soundcloud.com/beaucharman", title="What Beau follows on Soundcloud", re="exernal")
+                i.social-links__icon.fa.fa-soundcloud
+                | Soundcloud
