@@ -1,4 +1,4 @@
-import { LOCALS, PATHS } from '../constants'
+import { PATHS } from '../constants'
 import gulp from 'gulp'
 import stylus from 'gulp-stylus'
 import nib from 'nib'

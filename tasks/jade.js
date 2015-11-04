@@ -7,6 +7,8 @@ gulp.task('jade', () =>  {
   paths.unshift(PATHS.VIEWS.ENTRY)
 
   gulp.src(paths)
-    .pipe(jade({ locals: LOCALS }))
+    .pipe(jade({
+      locals: LOCALS,
+    }))
     .pipe(gulp.dest(PATHS.VIEWS.DIST))
 })
